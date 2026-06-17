@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра — SvetRunner - SvetTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #game {
+            border: 3px solid #333;
+            background: #f0f0f0;
+            display: block;
+            margin: 20px auto;
+        }
+        body.dark #game {
+            background: #1e1e1e;
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">SvetTech</a>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Поиск товаров...">
+                    <button id="search-btn">🔍</button>
+                </div>
+
+                <div class="header-actions">
+                    <button id="theme-toggle">🌙</button>
+                    <a href="accessibility.html" class="icon-btn" title="Версия для слабовидящих">👁️</a>
+                    <a href="favorites.html" class="icon-btn">❤️ <span id="fav-count">0</span></a>
+                    <a href="cart.html" class="icon-btn">🛒 <span id="cart-count">0</span></a>
+                    <a href="profile.html" id="profile-link">Личный кабинет</a>
+                    <a href="game.html" class="icon-btn" title="Игра за бонусы">🎮</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="catalog.html?category=all">Все товары</a></li>
+                <li><a href="catalog.html?category=smartphone">Смартфоны</a></li>
+                <li><a href="catalog.html?category=laptop">Ноутбуки</a></li>
+                <li><a href="catalog.html?category=headphones">Наушники</a></li>
+                <li><a href="catalog.html?category=watch">Смарт-часы</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main class="container" style="text-align: center; margin-top: 40px;">
+        <h1>SvetRunner</h1>
+        <p>Прыгай через препятствия! Управление: <strong>ПРОБЕЛ</strong> или клик</p>
+        <p>Испытай свое терпение ,<strong>сколько ты сможешь это терпеть?</strong></p>
+        
+        <canvas id="game" width="800" height="300"></canvas>
+        
+        <div id="game-info">
+            <h2>Счёт: <span id="score">0</span></h2>
+            <h3>Бонусы за игру: <span id="bonus">0</span></h3>
+        </div>
+
+        <button id="restart-btn" style="display:none; padding:12px 30px; font-size:18px;">Играть снова</button>
+    </main>
+
+    <script type="module" src="assets/js/auth.js"></script>
+    <script src="assets/js/game.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/counter.js"></script>
+</body>
+</html>

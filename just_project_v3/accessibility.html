@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Версия для слабовидящих - SvetTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body.accessibility {
+    background: url('badfon-oranzhevye-linii-svet (1).webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+    }
+        body.accessibility {
+            font-size: 24px;
+            line-height: 1.8;
+            background: #ffffff;
+            color: #000000;
+            font-weight: 600;
+        }
+        .accessibility-header {
+            background: #000;
+            color: #fff;
+            padding: 25px 0;
+            text-align: center;
+        }
+        .accessibility-header h1 {
+            font-size: 38px;
+        }
+        .main-nav {
+            background: #111;
+            padding: 18px 0;
+            text-align: center;
+        }
+        .main-nav a {
+            color: #fff;
+            font-size: 26px;
+            margin: 0 20px;
+            text-decoration: none;
+        }
+        .filters {
+            border: 5px solid #000;
+            padding: 30px;
+            background: #f8f8f8;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        .filters label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 14px 0;
+            font-size: 24px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .filters input[type="checkbox"] {
+            width: 30px;
+            height: 30px;
+            accent-color: #ff4500;
+        }
+        .accessible-product {
+            border: 5px solid #000;
+            padding: 35px;
+            margin-bottom: 50px;
+            background: #fff;
+        }
+        .accessible-product img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border: 5px solid #000;
+            margin-bottom: 30px;
+        }
+        .price-accessible {
+            font-size: 34px;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        button {
+            font-size: 26px;
+            padding: 20px 45px;
+        }
+    </style>
+</head>
+<body class="accessibility">
+    
+    <header class="accessibility-header">
+        <div class="container">
+            <h1>SvetTech — Версия для слабовидящих</h1>
+            <a href="index.html" style="color:#ffcc00; font-size:26px;">← Вернуться на обычную версию</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="accessibility.html?category=all">Все товары</a>
+            <a href="accessibility.html?category=smartphone">Смартфоны</a>
+            <a href="accessibility.html?category=laptop">Ноутбуки</a>
+            <a href="accessibility.html?category=headphones">Наушники</a>
+            <a href="accessibility.html?category=watch">Смарт-часы</a>
+        </div>
+    </nav>
+
+    <main class="container" style="margin-top: 40px; display: grid; grid-template-columns: 380px 1fr; gap: 40px;">
+        
+        <aside class="filters">
+            <h2>Фильтры</h2>
+            <div id="acc-filters"></div>
+        </aside>
+
+        <section>
+            <h2>Каталог товаров</h2>
+            <div id="accessible-products"></div>
+        </section>
+    </main>
+
+    <script type="module" src="assets/js/data.js"></script>
+    <script type="module" src="assets/js/accessibility.js"></script>
+</body>
+</html>

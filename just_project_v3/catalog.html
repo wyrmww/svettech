@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - SvetTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">SvetTech</a>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Поиск товаров...">
+                    <button id="search-btn">🔍</button>
+                </div>
+
+                <div class="header-actions">
+                    <button id="theme-toggle">🌙</button>
+                    <a href="accessibility.html" class="icon-btn" title="Версия для слабовидящих">👁️</a>
+                    <a href="favorites.html" class="icon-btn">❤️ <span id="fav-count">0</span></a>
+                    <a href="cart.html" class="icon-btn">🛒 <span id="cart-count">0</span></a>
+                    <a href="profile.html" id="profile-link">Личный кабинет</a>
+                    <a href="game.html" class="icon-btn" title="Игра за бонусы">🎮</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="catalog.html?category=all">Все товары</a></li>
+                <li><a href="catalog.html?category=smartphone">Смартфоны</a></li>
+                <li><a href="catalog.html?category=laptop">Ноутбуки</a></li>
+                <li><a href="catalog.html?category=headphones">Наушники</a></li>
+                <li><a href="catalog.html?category=watch">Смарт-часы</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main class="container" style="margin-top: 30px; display: grid; grid-template-columns: 280px 1fr; gap: 30px;">
+        
+        <!-- Фильтры (левая колонка) -->
+        <aside class="filters">
+    <h2>Фильтры</h2>
+    
+    <!-- Цена -->
+    <div class="filter-group">
+        <h3>Цена</h3>
+        <input type="number" id="price-min" placeholder="От">
+        <input type="number" id="price-max" placeholder="До">
+    </div>
+
+    <!-- Категория (галочки) -->
+    <div class="filter-group">
+        <h3>Категория</h3>
+        <label><input type="checkbox" value="smartphone" class="category-check"> Смартфоны</label><br>
+        <label><input type="checkbox" value="laptop" class="category-check"> Ноутбуки</label><br>
+        <label><input type="checkbox" value="headphones" class="category-check"> Наушники</label><br>
+        <label><input type="checkbox" value="watch" class="category-check"> Смарт-часы</label><br>
+    </div>
+
+    <!-- Бренд (галочки) -->
+    <div class="filter-group">
+        <h3>Бренд</h3>
+        <label><input type="checkbox" value="Apple" class="brand-check"> Apple</label><br>
+        <label><input type="checkbox" value="Samsung" class="brand-check"> Samsung</label><br>
+        <label><input type="checkbox" value="Sony" class="brand-check"> Sony</label><br>
+        <label><input type="checkbox" value="Dell" class="brand-check"> Dell</label><br>
+        <label><input type="checkbox" value="Lenovo" class="brand-check"> Lenovo</label><br>
+        <label><input type="checkbox" value="Xiaomi" class="brand-check"> Xiaomi</label><br>
+        <label><input type="checkbox" value="Google" class="brand-check"> Google</label><br>
+        <label><input type="checkbox" value="Asus" class="brand-check"> Asus</label><br>
+        <label><input type="checkbox" value="Huawei" class="brand-check"> Huawei</label><br>
+        <label><input type="checkbox" value="Bose" class="brand-check"> Bose</label><br>
+    </div>
+
+    <!-- Наличие -->
+    <div class="filter-group">
+        <h3>Наличие</h3>
+        <select id="stock-filter">
+            <option value="all">Все</option>
+            <option value="in">Только в наличии</option>
+        </select>
+    </div>
+
+    <button id="apply-filters">Применить фильтры</button>
+</aside>
+
+        <!-- Правая часть: товары -->
+        <section>
+            <div class="catalog-header">
+                <h1>Каталог товаров</h1>
+                <select id="sort-select">
+                    <option value="default">По умолчанию</option>
+                    <option value="price-asc">Цена: по возрастанию</option>
+                    <option value="price-desc">Цена: по убыванию</option>
+                    <option value="rating">По рейтингу</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Заполнится JS -->
+            </div>
+
+           
+            <div class="pagination" id="pagination">
+                <!-- Заполнится JS -->
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="assets/js/data.js"></script>
+    <script type="module" src="assets/js/catalog.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/counter.js"></script>
+</body>
+</html>

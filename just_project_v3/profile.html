@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - SvetTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">SvetTech</a>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Поиск товаров...">
+                    <button id="search-btn">🔍</button>
+                </div>
+
+                <div class="header-actions">
+                    <button id="theme-toggle">🌙</button>
+                    <a href="accessibility.html" class="icon-btn" title="Версия для слабовидящих">👁️</a>
+                    <a href="favorites.html" class="icon-btn">❤️ <span id="fav-count">0</span></a>
+                    <a href="cart.html" class="icon-btn">🛒 <span id="cart-count">0</span></a>
+                    <a href="profile.html" id="profile-link">Личный кабинет</a>
+                    <a href="game.html" class="icon-btn" title="Игра за бонусы">🎮</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="catalog.html?category=all">Все товары</a></li>
+                <li><a href="catalog.html?category=smartphone">Смартфоны</a></li>
+                <li><a href="catalog.html?category=laptop">Ноутбуки</a></li>
+                <li><a href="catalog.html?category=headphones">Наушники</a></li>
+                <li><a href="catalog.html?category=watch">Смарт-часы</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main class="container" style="margin-top: 40px;">
+        <h1>Личный кабинет</h1>
+        <div id="profile-content">
+            <!-- Заполнится через JS -->
+        </div>
+    </main>
+
+    <script type="module" src="assets/js/data.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script type="module" src="assets/js/profile.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/counter.js"></script>
+</body>
+</html>

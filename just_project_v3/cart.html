@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - SvetTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">SvetTech</a>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Поиск товаров...">
+                    <button id="search-btn">🔍</button>
+                </div>
+
+                <div class="header-actions">
+                    <button id="theme-toggle">🌙</button>
+                    <a href="accessibility.html" class="icon-btn" title="Для слабовидящих">A11y</a>
+                    <a href="favorites.html" class="icon-btn">❤️ <span id="fav-count">0</span></a>
+                    <a href="cart.html" class="icon-btn">🛒 <span id="cart-count">0</span></a>
+                    <a href="profile.html" id="profile-link">Личный кабинет</a>
+                    <a href="game.html" class="icon-btn" title="Игра за бонусы">🎮</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="catalog.html?category=all">Все товары</a></li>
+                <li><a href="catalog.html?category=smartphone">Смартфоны</a></li>
+                <li><a href="catalog.html?category=laptop">Ноутбуки</a></li>
+                <li><a href="catalog.html?category=headphones">Наушники</a></li>
+                <li><a href="catalog.html?category=watch">Смарт-часы</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <main class="container" style="margin-top: 40px;">
+        <h1>Корзина</h1>
+        <div id="cart-content">
+            <!-- Заполнится через JS -->
+        </div>
+        <div class="container" style="margin-top: 50px;">
+    <h1 class="section-title">Получи бонусы за игру</h1>
+    <div style="background: linear-gradient(135deg, #ff4500, #ff6b00); color: white; padding: 40px; border-radius: 16px; text-align: center;">
+        <h2 style="margin-bottom: 15px;">🎮 SvetRunner — Бонусная игра</h2>
+        <p style="font-size: 20px; margin-bottom: 25px;">Прыгай через препятствия и зарабатывай бонусы на покупки!</p>
+        <a href="game.html" class="btn" style="background: white; color: #ff4500; font-size: 20px; padding: 16px 40px;">Играть сейчас</a>
+        <p style="margin-top: 15px; opacity: 0.9;">До 500 бонусов за одну сессию</p>
+        </div>
+        </div>
+    </main>
+
+    <script type="module" src="assets/js/data.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script type="module" src="assets/js/cart.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/counter.js"></script>
+</body>
+</html>
